@@ -1,0 +1,52 @@
+/* precidra default stylesheet — granular single-property classes.
+   Each class covers exactly one style aspect so the UI can offer
+   independent palettes for stroke color, fill color, line width, and
+   dash pattern, which the user can combine freely. */
+
+/* line widths */
+.lw-hair   { stroke-width: 0.10mm; }
+.lw-thin   { stroke-width: 0.18mm; }
+.lw-normal { stroke-width: 0.25mm; }
+.lw-thick  { stroke-width: 0.50mm; }
+.lw-heavy  { stroke-width: 1.00mm; }
+
+/* dash patterns */
+.dp-solid  { stroke-dasharray: none; }
+.dp-dashed { stroke-dasharray: 2 1; }
+.dp-dotted { stroke-dasharray: 0.5 0.5; }
+.dp-dashdot{ stroke-dasharray: 2 1 0.5 1; }
+
+/* stroke colors */
+.sc-none   { stroke: none; }
+.sc-black  { stroke: #000000; }
+.sc-gray   { stroke: #666666; }
+.sc-red    { stroke: #cc2200; }
+.sc-orange { stroke: #dd6600; }
+.sc-green  { stroke: #008822; }
+.sc-blue   { stroke: #0055cc; }
+.sc-violet { stroke: #7700cc; }
+.sc-brown  { stroke: #774400; }
+.sc-yellow { stroke: #ddbb00; }
+
+/* fill colors */
+.fc-none   { fill: transparent; }
+.fc-black  { fill: #000000; }
+.fc-white  { fill: #ffffff; }
+.fc-red    { fill: #cc2200; }
+.fc-orange { fill: #dd6600; }
+.fc-green  { fill: #008822; }
+.fc-blue   { fill: #0055cc; }
+.fc-violet { fill: #7700cc; }
+.fc-brown  { fill: #774400; }
+.fc-yellow { fill: #ddbb00; }
+
+/* font styles, normal, bold, italic */
+.fn-sans-normal { font-weight: normal; font-style: normal; font-family: sans-serif; }
+.fn-sans-bold   { font-weight: bold;   font-style: normal; font-family: sans-serif; }
+.fn-sans-italic { font-weight: normal; font-style: italic; font-family: sans-serif; }
+
+/* fill opacity */
+.op-15     { fill-opacity: 0.15; }
+.op-25     { fill-opacity: 0.25; }
+.op-50     { fill-opacity: 0.50; }
+.op-opaque { fill-opacity: 1.00; }

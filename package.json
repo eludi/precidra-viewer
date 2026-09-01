@@ -1,0 +1,8 @@
+{
+  "name": "precidra-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Read-only viewer for Precidra .prec files, with WebMCP support.",
+  "license": "AGPL-3.0-or-later"
+}

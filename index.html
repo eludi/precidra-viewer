@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Precidra Viewer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a1a'/%3E%3Cpath d='M6 22 12 8 18 22 M9 16 15 16 M20 22 26 8 26 22' stroke='%23eee' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml">
+<!-- Origin-Agent-Cluster (see .htaccess / host config) is required for
+     document.modelContext to appear in MS Edge — see README. -->
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+    width: 100%; height: 100%; height: 100dvh;
+    overflow: hidden;
+    background: #1a1a1a;
+    font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #eee;
+}
+#canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+#canvas.panning { cursor: grabbing; }
+
+#topbar {
+    position: fixed; top: 0; left: 0; right: 0;
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 10px;
+    background: rgba(26,26,26,0.85);
+    backdrop-filter: blur(6px);
+    z-index: 10;
+}
+#topbar .brand { font-weight: 600; letter-spacing: 0.02em; margin-right: 4px; }
+#topbar button {
+    background: #333; color: #eee; border: 1px solid #555; border-radius: 4px;
+    padding: 5px 10px; font-size: 12px; cursor: pointer;
+}
+#topbar button:hover { background: #444; }
+#filename { color: #999; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+#mcpBadge {
+    font-size: 11px; padding: 2px 7px; border-radius: 10px; border: 1px solid #555; color: #999;
+}
+#mcpBadge.on { color: #6f6; border-color: #3a3; }
+
+#dropHint {
+    position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 10px; color: #888; text-align: center; padding: 20px;
+    pointer-events: none;
+}
+#dropHint.hidden { display: none; }
+#dropHint button { pointer-events: auto; }
+
+#panels {
+    position: fixed; top: 46px; right: 0; bottom: 0;
+    display: flex; flex-direction: column; gap: 8px;
+    padding: 8px; width: 280px; max-width: 90vw;
+    overflow-y: auto; pointer-events: none;
+}
+.panel {
+    background: rgba(34,34,34,0.92); border: 1px solid #444; border-radius: 6px;
+    padding: 8px 10px; pointer-events: auto;
+}
+.panel h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #999; margin-bottom: 6px; }
+.panel[hidden] { display: none; }
+
+#layerPanelHeader { cursor: pointer; user-select: none; display: flex; align-items: center; gap: 4px; }
+#layerDisclosure { display: inline-block; transition: transform 0.15s; font-size: 10px; }
+#layerPanel.collapsed #layerDisclosure { transform: rotate(-90deg); }
+#layerPanel.collapsed #layerList { display: none; }
+#layerPanel.collapsed h4 { margin-bottom: 0; }
+
+#layerList label { display: flex; align-items: center; gap: 6px; padding: 2px 0; cursor: pointer; }
+#layerList input { margin: 0; }
+#layerList span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+#inspector dl { display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; font-size: 12px; }
+#inspector dt { color: #999; }
+#inspector dd { overflow-wrap: anywhere; }
+#inspector .close { float: right; cursor: pointer; color: #999; }
+
+#dragOverlay {
+    position: fixed; inset: 0; z-index: 20; display: none;
+    align-items: center; justify-content: center;
+    background: rgba(0,100,200,0.15); border: 3px dashed #4af;
+    color: #cde; font-size: 18px;
+}
+#dragOverlay.active { display: flex; }
+
+#mcpStatus {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    padding: 5px 10px; font-size: 11px; font-family: ui-monospace, monospace;
+    background: rgba(26,26,26,0.85); backdrop-filter: blur(6px);
+    color: #6f6; border-top: 1px solid #333;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+#mcpStatus[hidden] { display: none; }
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+
+<div id="topbar">
+    <span class="brand">Precidra Viewer</span>
+    <button id="btnOpen">Open…</button>
+    <button id="btnFit">Zoom to fit</button>
+    <span id="filename"></span>
+    <span id="mcpBadge">WebMCP: checking…</span>
+    <a href="https://github.com/eludi/precidra-viewer" target="_blank" rel="noopener" style="color:#999;text-decoration:none;font-size:12px">Source</a>
+</div>
+
+<div id="dropHint">
+    <div style="font-size:15px">Drop a .prec file here, or</div>
+    <button id="btnOpen2">Choose a file…</button>
+</div>
+
+<div id="panels">
+    <div class="panel" id="layerPanel" hidden>
+        <h4 id="layerPanelHeader"><span class="disclosure" id="layerDisclosure">▾</span> Layers</h4>
+        <div id="layerList"></div>
+    </div>
+    <div class="panel" id="inspector" hidden>
+        <h4>Object <span class="close" id="btnCloseInspector">✕</span></h4>
+        <dl id="inspectorBody"></dl>
+    </div>
+</div>
+
+<div id="dragOverlay">Drop to open</div>
+
+<div id="mcpStatus" hidden></div>
+
+<script type="module" src="viewer.js"></script>
+</body>
+</html>
