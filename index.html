@@ -28,6 +28,8 @@ html, body {
     z-index: 10;
 }
 #topbar .brand { font-weight: 600; letter-spacing: 0.02em; margin-right: 4px; }
+#topbar .brand a { color: inherit; text-decoration: none; }
+#topbar .brand a:hover { text-decoration: underline; }
 #topbar button {
     background: #333; color: #eee; border: 1px solid #555; border-radius: 4px;
     padding: 5px 10px; font-size: 12px; cursor: pointer;
@@ -97,7 +99,7 @@ html, body {
 <canvas id="canvas"></canvas>
 
 <div id="topbar">
-    <span class="brand">Precidra Viewer</span>
+    <span class="brand"><a href="https://precidra.app" target="_blank" rel="noopener">Precidra</a> Viewer</span>
     <button id="btnOpen">Open…</button>
     <button id="btnFit">Zoom to fit</button>
     <span id="filename"></span>
