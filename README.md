@@ -1,5 +1,7 @@
 # Precidra Viewer
 
+**[Try it live](https://eludi.github.io/precidra-viewer/)**
+
 A read-only viewer for [Precidra](https://precidra.app) `.prec` drawing
 files: open a file, pan/zoom, toggle layers, click an object to inspect it —
 and query the document from an AI agent via
@@ -8,7 +10,7 @@ and query the document from an AI agent via
 This is a small, standalone subset of Precidra (a browser-based 2D precision
 drawing app). It does not include any drawing or editing tools — only what's
 needed to load, render and query a document. The full editor lives at
-[precidra.app](https://precidra.app) and is closed-source; this viewer is
+[precidra.app](https://precidra.app) and is free to use; this viewer is
 open source under AGPL-3.0 (see [LICENSE](LICENSE)).
 
 ## Running
@@ -41,7 +43,7 @@ Deploying behind a server you control? MS Edge only exposes
 Header always set Origin-Agent-Cluster "?1"
 ```
 
-## What's here vs. what's not
+## Architecture
 
 This repo is a verbatim copy of a handful of Precidra's modules — `math.js`,
 `model.js`, `generators.js`, `grid.js`, `renderer.js`, `web-mcp.js`, and
@@ -49,14 +51,8 @@ This repo is a verbatim copy of a handful of Precidra's modules — `math.js`,
 can be shared byte-for-byte by both apps; the main app's own `io.js` holds
 everything else — export, serialization, autosave). `io.js` here is a
 one-line re-export shim, so `model.js`/`web-mcp.js` don't need edits to work.
-Wired up to a new, small `viewer.js`/`index.html` shell. It deliberately
-excludes:
-
-- the drawing/editing command interpreter
-- DXF/SVG import and PNG/PDF/DXF export
-- polygon boolean operations (combine/subtract/intersect/trim)
-- autosave, undo/redo UI, and everything else that only matters while
-  authoring a drawing
+These are wired up to a new, small `viewer.js`/`index.html` shell built just
+for viewing and querying — no editing UI.
 
 ## License
 
