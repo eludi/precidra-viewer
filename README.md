@@ -1,6 +1,8 @@
 # Precidra Viewer
 
-**[Try it live](https://eludi.github.io/precidra-viewer/)**
+**[Try it live](https://eludi.github.io/precidra-viewer/)** — or open straight
+into a [sample floor plan](https://eludi.github.io/precidra-viewer/?url=samples/floorplan-schematic.prec)
+to see it (and WebMCP) working against a real drawing immediately.
 
 A read-only viewer for [Precidra](https://precidra.app) `.prec` drawing
 files: open a file, pan/zoom, toggle layers, click an object to inspect it —
@@ -24,7 +26,8 @@ python3 -m http.server 8080
 
 Then open `http://localhost:8080/`, and open a `.prec` file via the "Open…"
 button or by dragging it onto the page. You can also link directly to a
-hosted file with `?url=<path-to-file.prec>`.
+hosted file with `?url=<path-to-file.prec>` — see `samples/` for a small
+example floor plan usable this way.
 
 ## WebMCP
 

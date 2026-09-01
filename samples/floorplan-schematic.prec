@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<!-- https://precidra.app -->
+<precidra version="0.3.0" changed="2026-08-30T18:38:03.290Z">
+	<style type="text/css">
+    .lw-hair { stroke-width: 0.1mm; }
+    .lw-thin { stroke-width: 0.18mm; }
+    .lw-normal { stroke-width: 0.25mm; }
+    .lw-thick { stroke-width: 0.5mm; }
+    .lw-heavy { stroke-width: 1mm; }
+    .dp-solid { stroke-dasharray: none; }
+    .dp-dashed { stroke-dasharray: 2, 1; }
+    .dp-dotted { stroke-dasharray: 0.5, 0.5; }
+    .dp-dashdot { stroke-dasharray: 2, 1, 0.5, 1; }
+    .sc-none { stroke: none; }
+    .sc-black { stroke: rgb(0, 0, 0); }
+    .sc-gray { stroke: rgb(102, 102, 102); }
+    .sc-red { stroke: rgb(204, 34, 0); }
+    .sc-orange { stroke: rgb(221, 102, 0); }
+    .sc-green { stroke: rgb(0, 136, 34); }
+    .sc-blue { stroke: rgb(0, 85, 204); }
+    .sc-violet { stroke: rgb(119, 0, 204); }
+    .sc-brown { stroke: rgb(119, 68, 0); }
+    .sc-yellow { stroke: rgb(221, 187, 0); }
+    .fc-none { fill: transparent; }
+    .fc-black { fill: rgb(0, 0, 0); }
+    .fc-white { fill: rgb(255, 255, 255); }
+    .fc-red { fill: rgb(204, 34, 0); }
+    .fc-orange { fill: rgb(221, 102, 0); }
+    .fc-green { fill: rgb(0, 136, 34); }
+    .fc-blue { fill: rgb(0, 85, 204); }
+    .fc-violet { fill: rgb(119, 0, 204); }
+    .fc-brown { fill: rgb(119, 68, 0); }
+    .fc-yellow { fill: rgb(221, 187, 0); }
+    .fn-sans-normal { font-family: sans-serif; font-weight: normal; font-style: normal; }
+    .fn-sans-bold { font-family: sans-serif; font-weight: bold; font-style: normal; }
+    .fn-sans-italic { font-family: sans-serif; font-weight: normal; font-style: italic; }
+    .op-15 { fill-opacity: 0.15; }
+    .op-25 { fill-opacity: 0.25; }
+    .op-50 { fill-opacity: 0.5; }
+    .op-opaque { fill-opacity: 1; }
+	</style>
+	<viewport cx="8" cy="8" scale="10" paperW="420" paperH="297" rasterDpi="300"/>
+	<grid mode="uniform" unit="1" factor="2" precision="3" distanceTol="0.0001" angleTol="0.1"/>
+	<layers>
+		<layer name="0" z="0" style="stroke: rgb(0, 0, 0); stroke-dasharray: none"/>
+		<layer name="0_HATCH" z="12" locked="true" style="fill: rgb(0, 0, 0); fill-opacity: 0.25"/>
+		<layer name="0_SPACES" z="13" style="stroke: rgb(0, 85, 204)"/>
+		<layer name="0_DOORS" z="14" style="stroke: rgb(204, 34, 0)"/>
+		<layer name="0_WINDOWS" z="15" style="stroke: rgb(0, 136, 34)"/>
+		<layer name="0_TEXT" z="16"/>
+	</layers>
+	<text id="6985"  layer="0_TEXT"  x="12.5" y="11.75" rot="0" align="center bottom" size="3.5">living</text>
+	<text id="13973"  layer="0_TEXT"  x="12" y="8" rot="0" align="center bottom" size="3.5">dining</text>
+	<text id="18634"  layer="0_TEXT"  x="14" y="3.5" rot="0" align="center bottom" size="3.5">kitchen</text>
+	<text id="23297"  layer="0_TEXT"  x="11" y="3.5" rot="0" align="center bottom" size="3.5">hallway</text>
+	<text id="30294"  layer="0_TEXT"  x="7.125" y="2.875" rot="0" align="center bottom" size="3.5">bath</text>
+	<text id="37294"  layer="0_TEXT"  x="8" y="6" rot="0" align="center bottom" size="3.5">office</text>
+	<text id="41963"  layer="0_TEXT"  x="3" y="5" rot="0" align="center bottom" size="3.5">garage</text>
+	<text id="46634"  layer="0_TEXT"  x="8" y="11" rot="0" align="center bottom" size="3.5">patio</text>
+	<text id="53643"  layer="0_TEXT"  x="3.5" y="13" rot="0" align="center bottom" size="3.5">garden</text>
+	<entity id="63719" layer="0_SPACES">
+		<contour id="0">
+			9.915 10.094, 14.3 10.094, 14.3 10.269, 15.425 10.269, 15.425 13.844, 9.915 13.844
+		</contour>
+	</entity>
+	<entity id="66058" layer="0_SPACES">
+		<contour id="0">
+			14.3 5.769, 14.3 10.094, 9.915 10.094, 9.915 5.769
+		</contour>
+	</entity>
+	<entity id="68398" layer="0_SPACES">
+		<contour id="0">
+			15.425 5.769, 15.425 10.094, 14.415 10.094, 14.415 5.769
+		</contour>
+	</entity>
+	<entity id="70739" layer="0_SPACES">
+		<contour id="0">
+			12.54 5.594, 12.54 1.959, 15.425 1.959, 15.425 5.594
+		</contour>
+	</entity>
+	<entity id="73081" layer="0_SPACES">
+		<contour id="0">
+			8.54 3.969, 8.54 1.959, 11.915 1.959, 11.915 2.969, 12.425 2.969, 12.425 5.594, 9.915 5.594, 9.915 3.469, 9.74 3.469, 9.74 3.969
+		</contour>
+	</entity>
+	<entity id="75424" layer="0_SPACES">
+		<contour id="0">
+			8.425 1.959, 8.425 3.969, 6.415 3.969, 6.415 1.959
+		</contour>
+	</entity>
+	<entity id="77768" layer="0_SPACES">
+		<contour id="0">
+			6.415 7.718999, 6.415 4.084, 9.74 4.084, 9.74 7.718999
+		</contour>
+	</entity>
+	<entity id="80113" layer="0_SPACES" class="dp-dashed">
+		<contour id="0">
+			9.55 8.084, 9.55 14.19669125, 6.05 14.19669125, 6.05 8.084
+		</contour>
+	</entity>
+	<entity id="82459" layer="0_SPACES">
+		<contour id="0">
+			0.13 1.744, 2.93 1.744, 2.93 2.619, 3.13 2.619, 3.13 1.744, 5.93 1.744, 5.93 7.994, 3.13 7.994, 3.13 7.069, 2.93 7.069, 2.93 7.994, 0.13 7.994
+		</contour>
+	</entity>
+	<entity id="87154" layer="0_SPACES" class="dp-dashed">
+		<contour id="0">
+			0 8.094, 6.05 8.094, 6.05 14.19669125, 15.82 14.19669125, 15.82 17.554, 0 17.554
+		</contour>
+	</entity>
+	<entity id="94201" layer="0_SPACES" class="dp-dashed">
+		<contour id="0">
+			0 1.594, 0 0, 15.82 0, 15.82 1.594
+		</contour>
+	</entity>
+	<entity id="101249" layer="0_DOORS">
+		<contour id="0">
+			11.55 5.594, 11.55 5.769, 10.54 5.769, 10.54 5.594
+		</contour>
+	</entity>
+	<entity id="103600" layer="0_DOORS">
+		<contour id="0">
+			11.55 1.594, 11.55 1.959, 10.54 1.959, 10.54 1.594
+		</contour>
+	</entity>
+	<entity id="105952" layer="0_DOORS">
+		<contour id="0">
+			8.54 2.584, 8.54 3.459, 8.425 3.459, 8.425 2.584
+		</contour>
+	</entity>
+	<entity id="108305" layer="0_DOORS">
+		<contour id="0">
+			9.915 4.584, 9.915 5.469, 9.74 5.469, 9.74 4.584
+		</contour>
+	</entity>
+	<entity id="110659" layer="0_DOORS">
+		<contour id="0">
+			9.915 9.034, 9.915 10.044, 9.55 10.044, 9.55 9.034
+		</contour>
+	</entity>
+	<entity id="113014" layer="0_DOORS">
+		<contour id="0">
+			14.3 5.59400049, 14.3 5.769, 13.165 5.769, 13.165 5.59400049
+		</contour>
+	</entity>
+	<entity id="115370" layer="0_DOORS">
+		<contour id="0">
+			14.415 5.8765, 14.415 6.7515, 14.3 6.7515, 14.3 5.8765
+		</contour>
+	</entity>
+	<entity id="117727" layer="0_DOORS">
+		<contour id="0">
+			5.53 7.994, 5.53 8.094, 3.53 8.094, 3.53 7.994
+		</contour>
+	</entity>
+	<entity id="120085" layer="0_DOORS">
+		<contour id="0">
+			5.78 1.594, 5.78 1.744, 3.28 1.744, 3.28 1.594
+		</contour>
+	</entity>
+	<entity id="122444" layer="0_DOORS">
+		<contour id="0">
+			2.78 1.594, 2.78 1.744, 0.28 1.744, 0.28 1.594
+		</contour>
+	</entity>
+	<entity id="127163" layer="0_WINDOWS">
+		<contour id="0">
+			9.05 7.71899974, 9.05 8.084, 7.29 8.084, 7.29 7.71899974
+		</contour>
+	</entity>
+	<entity id="129524" layer="0_WINDOWS">
+		<contour id="0">
+			1.91 7.994, 1.91 8.094, 1.15 8.094, 1.15 7.994
+		</contour>
+	</entity>
+	<entity id="131886" layer="0_WINDOWS">
+		<contour id="0">
+			7.675 1.594, 7.675 1.959, 6.915 1.959, 6.915 1.594
+		</contour>
+	</entity>
+	<entity id="134249" layer="0_WINDOWS">
+		<contour id="0">
+			14.925 1.594, 14.925 1.959, 13.04 1.959, 13.04 1.594
+		</contour>
+	</entity>
+	<entity id="136613" layer="0_WINDOWS">
+		<contour id="0">
+			9.915 11.209, 9.915 13.469, 9.55 13.469, 9.55 11.209
+		</contour>
+	</entity>
+	<entity id="138978" layer="0_WINDOWS">
+		<contour id="0">
+			12.29 13.844, 12.29 14.19669125, 10.29 14.19669125, 10.29 13.844
+		</contour>
+	</entity>
+	<entity id="146078" layer="0_WINDOWS">
+		<contour id="0">
+			10.54 1.594, 10.54 1.959, 9.915 1.959, 9.915 1.594
+		</contour>
+	</entity>
+	<entity id="160283" layer="0_WINDOWS">
+		<contour id="0">
+			9.55 9.034, 9.55 8.334, 9.915 8.334, 9.915 9.034
+		</contour>
+	</entity>
+	<entity id="167388" layer="0_SPACES">
+		<contour id="0">
+			0 8.094, 0 1.594, 15.79 1.594, 15.79 14.19669125, 9.55 14.19669125, 9.55 8.084, 6.05 8.084, 6.05 8.094
+		</contour>
+	</entity>
+	<text id="169758"  layer="0_TEXT"  x="15" y="8" rot="90" align="center bottom" size="3.5">staircase</text>
+	<entity id="221931" layer="0_DOORS" open="true">
+		<contour id="0">
+			11.55 5.594, 11.55 4.584, 10.54 5.594 : 10.83582215 4.87982215
+		</contour>
+	</entity>
+	<entity id="224304" layer="0_DOORS" open="true">
+		<contour id="0">
+			13.6375 5.494, 14.5275 5.494
+		</contour>
+	</entity>
+	<entity id="226678" layer="0_DOORS" open="true">
+		<contour id="0">
+			14.4275 5.444, 14.5275 5.494, 14.4275 5.544
+		</contour>
+	</entity>
+	<entity id="229053" layer="0_DOORS" open="true">
+		<contour id="0">
+			14.415 5.8765, 15.29 5.8765, 14.415 6.7515 : 15.03371843 6.49521843
+		</contour>
+	</entity>
+	<entity id="231429" layer="0_DOORS" open="true">
+		<contour id="0">
+			9.74 4.584, 8.855 4.584, 9.74 5.469 : 9.1142105 5.2097895
+		</contour>
+	</entity>
+	<entity id="257600" layer="0_DOORS" open="true">
+		<contour id="0">
+			11.55 1.959, 11.55 2.969, 10.54 1.959 : 10.90355781 2.73502352
+		</contour>
+	</entity>
+	<entity id="269488" layer="0_DOORS" open="true">
+		<contour id="0">
+			8.425 3.459, 7.55 3.459, 8.425 2.584 : 7.80628168 2.84028145
+		</contour>
+	</entity>
+	<entity id="281391" layer="0_DOORS" open="true">
+		<contour id="0">
+			9.915 10.044, 10.925 10.044, 9.915 9.034 : 10.62917785 9.32982215
+		</contour>
+	</entity>
+	<entity id="286152" layer="0_DOORS" open="true">
+		<contour id="0">
+			3.53 8.094, 3.53 9.094, 4.53 8.09400015 : 4.23710678 8.80110678, 5.53 9.094 : 4.82289322 8.80110678, 5.53 8.094
+		</contour>
+	</entity>
+	<text id="288533"  layer="0_TEXT"  x="8" y="0.5" rot="0" align="center bottom" size="3.5">front yard</text>
+	<entity id="294650" layer="0_WINDOWS" open="true">
+		<contour id="0">
+			9.7325 11.209, 9.7325 13.469
+		</contour>
+	</entity>
+	<entity id="294705" layer="0_WINDOWS" open="true">
+		<contour id="0">
+			10.29 14.02034563, 12.29 14.02034563
+		</contour>
+	</entity>
+	<entity id="294761" layer="0_WINDOWS" open="true">
+		<contour id="0">
+			9.7325 9.034, 9.7325 8.334
+		</contour>
+	</entity>
+	<entity id="294875" layer="0_WINDOWS" open="true">
+		<contour id="0">
+			7.29 7.90149987, 9.05 7.90149987
+		</contour>
+	</entity>
+	<entity id="294991" layer="0_WINDOWS" open="true">
+		<contour id="0">
+			6.915 1.7765, 7.675 1.7765
+		</contour>
+	</entity>
+	<entity id="295050" layer="0_WINDOWS" open="true">
+		<contour id="0">
+			9.915 1.7765, 10.54 1.7765
+		</contour>
+	</entity>
+	<entity id="295110" layer="0_WINDOWS" open="true">
+		<contour id="0">
+			13.04 1.7765, 14.925 1.7765
+		</contour>
+	</entity>
+	<entity id="295417" layer="0_DOORS" open="true">
+		<contour id="0">
+			5.6475 2.22, 5.5975 2.32, 5.5475 2.22
+		</contour>
+	</entity>
+	<entity id="295667" layer="0_DOORS" open="true">
+		<contour id="0">
+			5.375 1.875, 5.5975 1.875, 5.5975 2.32
+		</contour>
+	</entity>
+	<entity id="296359" layer="0_DOORS" open="true">
+		<contour id="0">
+			2.6475 2.22, 2.5975 2.32, 2.5475 2.22
+		</contour>
+	</entity>
+	<entity id="296360" layer="0_DOORS" open="true">
+		<contour id="0">
+			2.375 1.875, 2.5975 1.875, 2.5975 2.32
+		</contour>
+	</entity>
+	<text id="296553"  layer="0_TEXT"  x="7.125" y="2.375" rot="0" align="center bottom" size="3.5">room</text>
+	<entity id="297538" layer="0_HATCH">
+		<contour id="0">
+			0 8.094, 0 1.594, 0.28 1.594, 0.28 1.744, 0.13 1.744, 0.13 7.994, 1.15 7.994, 1.15 8.094
+		</contour>
+	</entity>
+	<entity id="297603" layer="0_HATCH">
+		<contour id="0">
+			1.91 8.094, 1.91 7.994, 2.93 7.994, 2.93 7.069, 3.13 7.069, 3.13 7.994, 3.53 7.994, 3.53 8.094
+		</contour>
+	</entity>
+	<entity id="297669" layer="0_HATCH">
+		<contour id="0">
+			2.78 1.594, 3.28 1.594, 3.28 1.744, 3.13 1.744, 3.13 2.619, 2.93 2.619, 2.93 1.744, 2.78 1.744
+		</contour>
+	</entity>
+	<entity id="297736" layer="0_HATCH">
+		<contour id="0">
+			5.53 7.994, 5.93 7.994, 5.93 1.744, 5.78 1.744, 5.78 1.594, 6.915 1.594, 6.915 1.959, 6.415 1.959, 6.415 7.718999, 7.29 7.71899974, 7.29 8.084, 6.05 8.084, 6.05 8.094, 5.53 8.094
+		</contour>
+	</entity>
+	<entity id="297804" layer="0_HATCH">
+		<contour id="0">
+			6.415 4.084, 6.415 3.969, 8.425 3.969, 8.425 3.459, 8.54 3.459, 8.54 3.969, 9.74 3.969, 9.74 3.469, 9.915 3.469, 9.915 4.584, 9.74 4.584, 9.74 4.084
+		</contour>
+	</entity>
+	<entity id="297873" layer="0_HATCH">
+		<contour id="0">
+			7.675 1.959, 7.675 1.594, 9.915 1.594, 9.915 1.959, 8.54 1.959, 8.54 2.584, 8.42499978 2.584, 8.42499978 1.959
+		</contour>
+	</entity>
+	<entity id="297943" layer="0_HATCH">
+		<contour id="0">
+			9.05 8.084, 9.05 7.718999, 9.74 7.718999, 9.74 5.469, 9.915 5.469, 9.915 5.594, 10.54 5.594, 10.54 5.769, 9.915 5.769, 9.915 8.334, 9.55 8.334, 9.55 8.084
+		</contour>
+	</entity>
+	<entity id="298014" layer="0_HATCH">
+		<contour id="0">
+			9.915 10.044, 9.915 11.209, 9.55 11.209, 9.55 10.044
+		</contour>
+	</entity>
+	<entity id="298086" layer="0_HATCH">
+		<contour id="0">
+			9.55 13.469, 9.915 13.469, 9.915 13.844, 10.29 13.844, 10.29 14.19669125, 9.55 14.19669125
+		</contour>
+	</entity>
+	<entity id="298159" layer="0_HATCH">
+		<contour id="0">
+			13.04 1.594, 13.04 1.959, 12.54 1.959, 12.54 5.594, 13.165 5.59400049, 13.165 5.769, 11.55 5.769, 11.55 5.594, 12.425 5.594, 12.425 2.969, 11.915 2.969, 11.915 1.959, 11.55 1.959, 11.55 1.594
+		</contour>
+		<contour id="1">
+			12.425 2.919, 12.425 1.959, 11.965 1.959, 11.965 2.919
+		</contour>
+	</entity>
+	<entity id="298381" layer="0_HATCH">
+		<contour id="0">
+			14.925 1.959, 14.925 1.594, 15.79 1.594, 15.79 14.1966915, 12.29 14.19669125, 12.29 13.844, 15.425 13.844, 15.425 10.269, 14.3 10.269, 14.3 6.7515, 14.415 6.7515, 14.415 10.094, 15.425 10.094, 15.425 5.769, 14.415 5.769, 14.415 5.8765, 14.3 5.8765, 14.3 5.594, 15.425 5.594, 15.425 1.959
+		</contour>
+	</entity>
+</precidra>
