@@ -14,7 +14,7 @@ import { screenToWorld } from './math.js';
 import { Grid } from './grid.js';
 import { Renderer } from './renderer.js';
 import { Kernel } from './model.js';
-import { parsePrecidra, parseStylesheet, setBaseName, getBaseName, loadFile, _applyGridData } from './io.js';
+import { parsePrecidra, parseStylesheet, setBaseName, getBaseName, loadFile, _applyGridData } from './io-parse.js';
 import { tools, registerWebMcpTools } from './web-mcp.js';
 
 const canvas = document.getElementById('canvas');

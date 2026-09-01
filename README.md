@@ -43,11 +43,14 @@ Header always set Origin-Agent-Cluster "?1"
 
 ## What's here vs. what's not
 
-This repo is a trimmed, standalone copy of a handful of Precidra's modules
-(`math.js`, `model.js`, `generators.js`, `grid.js`, `renderer.js`,
-`web-mcp.js`, plus a parse-only `io.js`), unchanged from the main app except
-where noted in each file, wired up to a new, small `viewer.js`/`index.html`
-shell. It deliberately excludes:
+This repo is a verbatim copy of a handful of Precidra's modules — `math.js`,
+`model.js`, `generators.js`, `grid.js`, `renderer.js`, `web-mcp.js`, and
+`io-parse.js` (Precidra's parsing code, split out into its own module so it
+can be shared byte-for-byte by both apps; the main app's own `io.js` holds
+everything else — export, serialization, autosave). `io.js` here is a
+one-line re-export shim, so `model.js`/`web-mcp.js` don't need edits to work.
+Wired up to a new, small `viewer.js`/`index.html` shell. It deliberately
+excludes:
 
 - the drawing/editing command interpreter
 - DXF/SVG import and PNG/PDF/DXF export
