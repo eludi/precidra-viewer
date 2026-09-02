@@ -3,7 +3,7 @@
 **[Try it live](https://eludi.github.io/precidra-viewer/)** — or open straight
 into a [sample floor plan](https://eludi.github.io/precidra-viewer/?url=samples/floorplan-schematic.prec)
 to see it (and WebMCP) working against a real drawing immediately.
-[Watch a 2-minute demo](samples/precidra-viewer.mp4).
+[Watch a 2-minute demo](https://eludi.github.io/precidra-viewer/samples/precidra-viewer.mp4).
 
 A read-only viewer for [Precidra](https://precidra.app) `.prec` drawing
 files: open a file, pan/zoom, toggle layers, click an object to inspect it —
